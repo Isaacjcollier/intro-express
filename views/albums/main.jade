@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+  div.container
+    h2 albums home page
+
+    //- ul 
+    //-   for album in albums
+    //-     li
+    //-     | #{album.genre} #{album.artist} #{album.name}
+    //-     a(href='/albums/#{album._id}') [#{album.name}]
+
+    //- a(href="/albums/new") This will take you to the new Page
+    a(href="/albums/new") Create a New album
+  div
+  div   
+  br
+
+  table.table.table-striped
+    thead
+      tr: th Genre 
+          th Artist
+          th Name
+          th Select
+    tbody
+      for album in albums
+        tr
+          td 
+            | #{album.genre}
+          td
+            | #{album.artist}
+          td
+            | #{album.name}
+          td 
+            a(href='/albums/#{album._id}') [#{album.name}]
+        
+          

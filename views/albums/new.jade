@@ -1,0 +1,12 @@
+form(name='new-album' method='POST' action='/albums')
+  p
+    label(for='genre') Genre
+    input(type='text' name='genre')
+  p
+    label(for='artist') Artist
+    input(type='text' name='artist')
+  p
+    label(for='name') Name
+    input(type='text' name='name')
+  p
+    input(type='submit' value='create an album')

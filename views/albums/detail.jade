@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    div.container
+        h1 Album Details
+
+        p genre is : #{album.genre}
+        p name is : #{album.name}
+        p artist is : #{album.artist}
+
+        a.btn.btn-success(href="/albums/#{album._id}/edit") Edit 
+
